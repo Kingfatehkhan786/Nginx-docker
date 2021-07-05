@@ -2,6 +2,7 @@ server {
      server_name _;
      root /var/www/html;
      index index.html index.php;
+     
 
                 location ~* \.php$ {
                 # With php-fpm unix sockets

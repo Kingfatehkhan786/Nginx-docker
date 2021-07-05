@@ -28,7 +28,7 @@ ARG  DEBIAN_FRONTEND=noninteractive apt update \
 
 RUN yes |   apt install nginx 
 
-COPY ./default /etc/nginx/sites-available/default
+
 EXPOSE 80 443
 
 
