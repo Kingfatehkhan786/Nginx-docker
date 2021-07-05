@@ -1,0 +1,15 @@
+server {
+     server_name _;
+     root /var/www/html;
+     index index.html index.php;
+
+                location ~* \.php$ {
+                # With php-fpm unix sockets
+                fastcgi_pass    php:9001;
+                include         fastcgi_params;
+                fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+                fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
+           #     fastcgi_param  MAGE_RUN_TYPE website;
+        }
+
+}
